@@ -1,0 +1,117 @@
+import colorama
+from colorama import Fore, Style
+
+def validar_opcion_int(opcion):
+    """
+    Valida que la opción ingresada sea un entero.
+    Si no lo es, solicita al usuario hasta obtener un valor válido.
+    Parámetros:
+        opcion (str): La opción ingresada por el usuario.
+    Retorna:
+        int: La opción validada como entero.
+    """
+    valido = False
+    while not valido:
+        try:
+            opcion = int(opcion)
+            valido = True
+        except:
+            print("Error, opción no válida")
+            opcion = input("Opción deseada: ")
+    return opcion
+
+def crear_tablero(renglones, columnas):
+    """
+    Crea un tablero vacío representado como una lista de listas.
+    Cada celda comienza con '??' para indicar que está oculta.
+    Parámetros:
+        renglones (int): Número de filas del tablero.
+        columnas (int): Número de columnas del tablero.
+    Retorna:
+        list: Tablero como lista de listas.
+    """
+    tablero = []
+    for r in range(renglones):
+        fila = []
+        for c in range(columnas):
+            fila.append('??')
+        tablero.append(fila)
+    return tablero
+
+def mostrar_tablero(tablero):
+    """
+    Imprime el tablero en pantalla de manera formateada.
+    Parámetros:
+        tablero (list): Tablero a mostrar (lista de listas).
+    Retorna:
+        None
+    """
+    ren = len(tablero)
+    col = len(tablero[0])
+    # Imprime encabezado de columnas
+    print("   ", end="")
+    for c in range(col):
+        print(f"{c+1:^5}", end="")
+    print()
+    print("   " + "+-----"*col + "+")
+    # Imprime filas con su número
+    for r in range(ren):
+        print(f"{r+1:^3}|", end="")
+        for c in range(col):
+            print(f" {tablero[r][c]:^3} |", end="")
+        print()
+        print("   " + "+-----"*col + "+")
+
+def datos_generales():
+    """
+    Muestra los datos generales del autor y materia.
+    Retorna:
+        None
+    """
+    print("\nDATOS GENERALES")
+    print("Materia: Programación\nNombre: [Tu Nombre]\nMatrícula: [Tu Matrícula]\nCarrera: [Tu Carrera]\nFecha: 15/10/2025\n")
+
+def descripcion_juego():
+    """
+    Muestra la descripción del juego y su beneficio cognitivo.
+    Retorna:
+        None
+    """
+    print("\nDESCRIPCIÓN DEL JUEGO")
+    print("Memorama Musical: Empareja tarjetas con títulos de canciones, autores y años.")
+    print("El objetivo es estimular la memoria, atención y aprendizaje cultural, ayudando al desarrollo cognitivo a través del reconocimiento y asociación de información musical.\n")
+
+def jugar():
+    """
+    Inicializa el tablero y lo muestra.
+    Posteriormente aquí irá la lógica del juego.
+    Retorna:
+        None
+    """
+    print("\n¡Comienza el juego!")
+    nombre = input("¿Cuál es tu nombre? ")
+    renglones, columnas = 6, 6  # Tablero 6x6
+    tablero = crear_tablero(renglones, columnas)
+    print(f"\nTablero inicial para {nombre}:")
+    mostrar_tablero(tablero)
+
+def main():
+    colorama.init(autoreset=True)
+    opcion = 0
+    while opcion != 4:
+        print(Style.BRIGHT + Fore.BLUE + "\nJuego de Memorama Musical")
+        print("1) Datos Generales")
+        print("2) Descripción del juego")
+        print("3) Jugar")
+        print("4) Terminar")
+        opcion = validar_opcion_int(input("Opción deseada: "))
+        if opcion == 1:
+            datos_generales()
+        elif opcion == 2:
+            descripcion_juego()
+        elif opcion == 3:
+            jugar()
+        elif opcion == 4:
+            print(Fore.GREEN + "\n¡Gracias por jugar! Hasta la próxima.\n")
+
+main()
