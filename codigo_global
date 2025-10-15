@@ -48,13 +48,13 @@ def mostrar_tablero(tablero):
     """
     ren = len(tablero)
     col = len(tablero[0])
-    # Imprime encabezado de columnas alineado
+    
     print("   ", end="")
     for c in range(col):
         print(f"{c+1:>5}", end="")
     print()
     print("   " + "+----"*col + "+")
-    # Imprime filas con su número y celdas
+
     for r in range(ren):
         print(f"{r+1:>2} |", end="")
         for c in range(col):
