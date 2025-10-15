@@ -6,9 +6,9 @@ def validar_opcion_int(opcion):
     Valida que la opción ingresada sea un entero.
     Si no lo es, solicita al usuario hasta obtener un valor válido.
     Parámetros:
-        opcion (str): La opción ingresada por el usuario.
-    Retorna:
-        int: La opción validada como entero.
+        opcion ingresada por el usuario
+    Regresa:
+        la opcion validada como un entero
     """
     valido = False
     while not valido:
@@ -25,10 +25,10 @@ def crear_tablero(renglones, columnas):
     Crea un tablero vacío representado como una lista de listas.
     Cada celda comienza con '??' para indicar que está oculta.
     Parámetros:
-        renglones (int): Número de filas del tablero.
-        columnas (int): Número de columnas del tablero.
-    Retorna:
-        list: Tablero como lista de listas.
+        renglones: Número de filas del tablero.
+        columnas: Número de columnas del tablero.
+    Regresa:
+        Tablero como una matriz.
     """
     tablero = []
     for r in range(renglones):
@@ -42,58 +42,100 @@ def mostrar_tablero(tablero):
     """
     Imprime el tablero en pantalla de manera formateada.
     Parámetros:
-        tablero (list): Tablero a mostrar (lista de listas).
-    Retorna:
-        None
+        el tablero generado
+    Regresa:
+        nada ya que todo lo hace aqui
     """
     ren = len(tablero)
     col = len(tablero[0])
-    # Imprime encabezado de columnas
+    # Imprime encabezado de columnas alineado
     print("   ", end="")
     for c in range(col):
-        print(f"{c+1:^5}", end="")
+        print(f"{c+1:>5}", end="")
     print()
-    print("   " + "+-----"*col + "+")
-    # Imprime filas con su número
+    print("   " + "+----"*col + "+")
+    # Imprime filas con su número y celdas
     for r in range(ren):
-        print(f"{r+1:^3}|", end="")
+        print(f"{r+1:>2} |", end="")
         for c in range(col):
-            print(f" {tablero[r][c]:^3} |", end="")
+            print(f"{tablero[r][c]:>4}|", end="")
         print()
-        print("   " + "+-----"*col + "+")
+        print("   " + "+----"*col + "+")
 
 def datos_generales():
     """
     Muestra los datos generales del autor y materia.
-    Retorna:
-        None
+    Regresa:
+        Nada ya que lo imprime directamente
     """
     print("\nDATOS GENERALES")
-    print("Materia: Programación\nNombre: [Tu Nombre]\nMatrícula: [Tu Matrícula]\nCarrera: [Tu Carrera]\nFecha: 15/10/2025\n")
+    print("Materia: Programación\n"
+          "Nombre: Raúl Antonio Guerrero Canales\n"
+          "Matrícula: A01277404\n"
+          "Carrera: IMT Ingeniería en Mecatrónica\n"
+          "Fecha: 15/10/2025\n")
 
 def descripcion_juego():
     """
-    Muestra la descripción del juego y su beneficio cognitivo.
-    Retorna:
-        None
+    Muestra la descripción del juego demás información como beneficios ect.
+    Regresa:
+        Nada porque lo imprime directamente
     """
     print("\nDESCRIPCIÓN DEL JUEGO")
     print("Memorama Musical: Empareja tarjetas con títulos de canciones, autores y años.")
     print("El objetivo es estimular la memoria, atención y aprendizaje cultural, ayudando al desarrollo cognitivo a través del reconocimiento y asociación de información musical.\n")
 
+def solicitar_posicion(tablero):
+    """
+    Solicita al usuario una posición válida (fila y columna) en el tablero.
+    Valida que sean números y que estén dentro del rango del tablero.
+    Parámetros:
+        tablero actual del juego
+    Retorna:
+        Peticion de la fila y columna para su uso posterior
+    """
+    filas = len(tablero)
+    columnas = len(tablero[0])
+    posicion_valida = False
+    while not posicion_valida:
+        fila = input(f"Ingrese la fila (1 a {filas}): ")
+        columna = input(f"Ingrese la columna (1 a {columnas}): ")
+        if fila.isdigit() and columna.isdigit():
+            fila = int(fila)
+            columna = int(columna)
+            if 1 <= fila <= filas and 1 <= columna <= columnas:
+                posicion_valida = True
+                return (fila-1, columna-1)
+            else:
+                print("La fila o columna están fuera de rango.")
+        else:
+            print("Por favor, ingrese números válidos para fila y columna.")
+
 def jugar():
     """
-    Inicializa el tablero y lo muestra.
-    Posteriormente aquí irá la lógica del juego.
+    Permite jugar una ronda sencilla: inicializa el tablero, muestra el tablero,
+    solicita una jugada, actualiza el tablero y muestra el tablero actualizado.
     Retorna:
-        None
+        nada, todo se maneja dentro de la función indicando que se quiere jugar
     """
     print("\n¡Comienza el juego!")
-    nombre = input("¿Cuál es tu nombre? ")
-    renglones, columnas = 6, 6  # Tablero 6x6
+    renglones = 6
+    columnas = 6  
     tablero = crear_tablero(renglones, columnas)
-    print(f"\nTablero inicial para {nombre}:")
+    puntos = 0
     mostrar_tablero(tablero)
+    
+    respuesta = "s"
+    while respuesta == "s":
+        print(Fore.YELLOW + f"\nPuntos acumulados: {puntos}")
+        print("Realiza una jugada (elige una celda para revelar temporalmente):")
+        fila, columna = solicitar_posicion(tablero)
+        tablero[fila][columna] = "X"
+        mostrar_tablero(tablero)
+        puntos += 1
+        respuesta = input("¿Deseas hacer otra jugada? (s/n): ").strip().lower()
+        while respuesta not in ["s", "n"]:
+            respuesta = input("Por favor ingresa 's' para sí o 'n' para no: ").strip().lower()
 
 def main():
     colorama.init(autoreset=True)
