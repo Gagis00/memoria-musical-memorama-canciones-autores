@@ -1,0 +1,11 @@
+INSTRUCCIONES Y REGLAS DEL JUEGO
+
+1. El objetivo es emparejar correctamente tarjetas que contienen títulos de canciones famosas con su autor y año de la canción.
+2. El tablero es de 6x6, con 18 canciones y sus pares correspondientes.
+3. En cada ronda puedes voltear dos cartas. Si forman un par correcto, se retiran del tablero y ganas un punto.
+4. Si no logras emparejar, las cartas se vuelven a poner boca abajo y se suma un intento.
+5. El juego termina cuando se han emparejado todos los pares.
+6. El puntaje final toma en cuenta los aciertos, los intentos y la época de las canciones.
+7. Al hacer un match correcto, se muestra un dato curioso de la canción.
+
+¡Diviértete y pon a prueba tu memoria musical!
