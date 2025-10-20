@@ -8,6 +8,9 @@ def crear_baraja(num_2010s, num_1990s_2010, num_1970s_1990):
     seleccion_1990s_2010 = random.sample(CANCIONES_1990s_2010, num_1990s_2010)
     seleccion_1970s_1990 = random.sample(CANCIONES_1970s_1990, num_1970s_1990)
     canciones_partida = seleccion_2010s + seleccion_1990s_2010 + seleccion_1970s_1990
-    baraja = canciones_partida * 2 
+    baraja = []
+    for cancion in canciones_partida:
+        baraja.append({"tipo": "titulo", **cancion})
+        baraja.append({"tipo": "datos", **cancion})
     random.shuffle(baraja)
     return baraja
