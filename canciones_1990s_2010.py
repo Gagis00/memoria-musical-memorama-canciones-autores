@@ -15,7 +15,7 @@ CANCIONES_1990s_2010 = [
     },
     {
         "titulo": "Umbrella",
-        "autor": "Rihanna feat. Jay-Z",
+        "autor": "Rihanna ft. Jay-Z",
         "anio": 2007,
         "epoca": "1990s-2010",
         "curioso": "El 'ella, ella, eh, eh, eh' se volvió icónico a nivel mundial."
@@ -29,7 +29,7 @@ CANCIONES_1990s_2010 = [
     },
     {
         "titulo": "Smooth",
-        "autor": "Santana feat. Rob Thomas",
+        "autor": "Santana ft. Rob Thomas",
         "anio": 1999,
         "epoca": "1990s-2010",
         "curioso": "Ganó tres Grammys y es reconocida por su fusión de rock latino."
@@ -43,14 +43,14 @@ CANCIONES_1990s_2010 = [
     },
     {
         "titulo": "Hips Don't Lie",
-        "autor": "Shakira feat. Wyclef Jean",
+        "autor": "Shakira ft. Wyclef Jean",
         "anio": 2006,
         "epoca": "1990s-2010",
         "curioso": "Es una de las canciones más exitosas de Shakira a nivel mundial."
     },
     {
         "titulo": "Yeah!",
-        "autor": "Usher feat. Lil Jon & Ludacris",
+        "autor": "Usher ft. Lil Jon & Ludacris",
         "anio": 2004,
         "epoca": "1990s-2010",
         "curioso": "Fue la canción más exitosa de 2004 en EE.UU."
@@ -64,7 +64,7 @@ CANCIONES_1990s_2010 = [
     },
     {
         "titulo": "Crazy in Love",
-        "autor": "Beyoncé feat. Jay-Z",
+        "autor": "Beyoncé ft. Jay-Z",
         "anio": 2003,
         "epoca": "1990s-2010",
         "curioso": "Marcó el inicio de la carrera solista de Beyoncé."

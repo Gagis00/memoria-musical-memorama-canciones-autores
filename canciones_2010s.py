@@ -8,7 +8,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "Uptown Funk",
-        "autor": "Mark Ronson feat. Bruno Mars",
+        "autor": "Mark Ronson ft. Bruno Mars",
         "anio": 2014,
         "epoca": "2010s",
         "curioso": "Rompió récord por estar 14 semanas en el #1 del Billboard Hot 100."
@@ -36,7 +36,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "Closer",
-        "autor": "The Chainsmokers feat. Halsey",
+        "autor": "The Chainsmokers ft. Halsey",
         "anio": 2016,
         "epoca": "2010s",
         "curioso": "La canción estuvo más de 12 semanas en el #1 de Billboard."
@@ -64,7 +64,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "Old Town Road",
-        "autor": "Lil Nas X feat. Billy Ray Cyrus",
+        "autor": "Lil Nas X ft. Billy Ray Cyrus",
         "anio": 2019,
         "epoca": "2010s",
         "curioso": "Fue viral en TikTok y rompió récord de semanas en el #1 (19 semanas)."
@@ -134,7 +134,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "Lean On",
-        "autor": "Major Lazer feat. MØ & DJ Snake",
+        "autor": "Major Lazer",
         "anio": 2015,
         "epoca": "2010s",
         "curioso": "Fue la canción más reproducida en Spotify hasta 2017."
@@ -176,7 +176,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "Havana",
-        "autor": "Camila Cabello feat. Young Thug",
+        "autor": "Camila Cabello ft. Young Thug",
         "anio": 2017,
         "epoca": "2010s",
         "curioso": "Se inspiró en sus raíces cubanas."
@@ -204,7 +204,7 @@ CANCIONES_2010s = [
     },
     {
         "titulo": "See You Again",
-        "autor": "Wiz Khalifa feat. Charlie Puth",
+        "autor": "Wiz Khalifa ft. Charlie Puth",
         "anio": 2015,
         "epoca": "2010s",
         "curioso": "Es un tributo al actor Paul Walker y rompió récords de visualización en Youtube."
