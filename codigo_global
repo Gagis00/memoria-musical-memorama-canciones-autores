@@ -1,3 +1,5 @@
+## codigo_global.py para presentar la idea del juego
+
 import colorama
 from colorama import Fore, Style
 

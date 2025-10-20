@@ -1,3 +1,8 @@
+'''
+Este grupo de datos contiene canciones populares de la década de 2010,
+junto con información sobre sus autores, año de lanzamiento, época y datos curiosos.
+'''
+
 CANCIONES_2010s = [
     {
         "titulo": "Rolling in the Deep",

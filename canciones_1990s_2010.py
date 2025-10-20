@@ -1,3 +1,8 @@
+'''
+Este grupo de datos contiene canciones populares de las décadas de 1990 a 2010,
+junto con información sobre sus autores, año de lanzamiento, época y datos curiosos.
+'''
+
 CANCIONES_1990s_2010 = [
     {
         "titulo": "Hey Ya!",

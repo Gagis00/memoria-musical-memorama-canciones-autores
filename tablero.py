@@ -1,35 +1,40 @@
-def crear_tablero(renglones, columnas, baraja):
-    # Llena el tablero real con objetos de canciones de la baraja
-    tablero = []
-    idx = 0
-    for i in range(renglones):
-        fila = []
-        for j in range(columnas):
-            fila.append(baraja[idx])
-            idx += 1
-        tablero.append(fila)
-    return tablero
+'''
+Maneja la creación y visualización del tablero del juego
+'''
+
+def crear_tablero(renglones, columnas, baraja): #Crea el tablero del juego
+    '''
+    Crea un tablero con las cartas distribuidas.
+    '''
+    tablero = [] #Inicializa el tablero vacío
+    idx = 0 #Índice para recorrer la baraja
+    for i in range(renglones): #Para cada fila
+        fila = [] #Inicializa la fila vacía
+        for j in range(columnas): #Para cada columna
+            fila.append(baraja[idx]) #Agrega una carta a la fila
+            idx += 1 #Avanza al siguiente índice de la baraja
+        tablero.append(fila) #Agrega la fila al tablero
+    return tablero #Regresa el tablero completo
 
 def crear_tablero_visible(renglones, columnas):
-    # Tablero que ve el usuario: solo "??" al principio
+    # Tablero lleno de "??"
     return [["??" for _ in range(columnas)] for _ in range(renglones)]
 
-def mostrar_tablero(tablero_visible):
-    ren = len(tablero_visible)
-    col = len(tablero_visible[0])
-    # Encuentra el ancho máximo de todas las celdas
-    ancho = max(
-        [len(str(tablero_visible[r][c])) for r in range(ren) for c in range(col)] + [2]
-    )
-    # Imprime encabezados de columna
-    print("   ", end="")
-    for c in range(col):
-        print(f"{c+1:>{ancho}}", end="")
-    print()
-    print("   " + ("+" + "-"*ancho)*col + "+")
-    for r in range(ren):
-        print(f"{r+1:>2} |", end="")
-        for c in range(col):
-            print(f"{str(tablero_visible[r][c]):>{ancho}}|", end="")
+def mostrar_tablero(tablero_visible): 
+    '''
+    Imprime el tablero formateado
+    '''
+    ren = len(tablero_visible) # Número de filas
+    col = len(tablero_visible[0]) # Número de columnas
+    ancho = max([len(str(tablero_visible[r][c])) for r in range(ren) for c in range(col)] + [2]) # Ancho máximo de celda
+    print("   ", end="") # imprime los encabezados de columna
+    for c in range(col): # Para cada columna
+        print(f"{c+1:>{ancho}}", end="") # Imprime el número de columna con el ancho adecuado
+    print() 
+    print("   " + ("+" + "-"*ancho)*col + "+") # Imprime la línea superior del tablero
+    for r in range(ren): # Para cada fila
+        print(f"{r+1:>2} |", end="") # Imprime el número de fila
+        for c in range(col): # Para cada columna
+            print(f"{str(tablero_visible[r][c]):>{ancho}}|", end="") # Imprime el contenido de la celda con el ancho adecuado
         print()
-        print("   " + ("+" + "-"*ancho)*col + "+")
+        print("   " + ("+" + "-"*ancho)*col + "+") # Imprime las separaciones

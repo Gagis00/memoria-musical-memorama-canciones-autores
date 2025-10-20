@@ -1,3 +1,8 @@
+'''
+Este grupo de datos contiene canciones populares de las décadas de 1970 a 1990,
+junto con información sobre sus autores, año de lanzamiento, época y datos curiosos.
+'''
+
 CANCIONES_1970s_1990 = [
     {
         "titulo": "Billie Jean",

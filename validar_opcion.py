@@ -1,13 +1,9 @@
 def validar_opcion_int(opcion):
     """
-    Valida que la opción ingresada sea un entero.
-    Si no lo es, solicita al usuario hasta obtener un valor válido.
-    Parámetros:
-        opcion ingresada por el usuario
-    Regresa:
-        la opcion validada como un entero
+    valida que la opcion ingresada en el menu principal sea un entero
+    si no lo es, solicita al usuario hasta obtener un valor valido
     """
-    valido = False
+    valido = False 
     while not valido:
         try:
             opcion = int(opcion)
