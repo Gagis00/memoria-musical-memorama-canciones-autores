@@ -1,18 +1,24 @@
 def solicitar_posicion(tablero):
     """
     Solicita al usuario una posición válida (fila y columna) en el tablero.
-    Valida que sean números y que estén dentro del rango del tablero.
+    Valida que sean números, que estén dentro del rango del tablero,
+    y permite salir escribiendo 'salir'.
     Parámetros:
         tablero actual del juego
     Retorna:
-        Peticion de la fila y columna para su uso posterior
+        (fila, columna) como tupla de enteros (base 0),
+        o ('salir', 'salir') si el usuario lo indica.
     """
     filas = len(tablero)
     columnas = len(tablero[0])
     posicion_valida = False
     while not posicion_valida:
-        fila = input(f"Ingrese la fila (1 a {filas}): ")
-        columna = input(f"Ingrese la columna (1 a {columnas}): ")
+        fila = input(f"Ingrese la fila (1 a {filas}) o 'salir' para terminar: ").strip().lower()
+        if fila == "salir":
+            return ("salir", "salir")
+        columna = input(f"Ingrese la columna (1 a {columnas}) o 'salir' para terminar: ").strip().lower()
+        if columna == "salir":
+            return ("salir", "salir")
         if fila.isdigit() and columna.isdigit():
             fila = int(fila)
             columna = int(columna)
@@ -22,4 +28,4 @@ def solicitar_posicion(tablero):
             else:
                 print("La fila o columna están fuera de rango.")
         else:
-            print("Por favor, ingrese números válidos para fila y columna.")
+            print("Por favor, ingrese números válidos o 'salir'.")
