@@ -1,12 +1,16 @@
 # Memorama Musical 🎵
 
+&nbsp;
+
 ## Descripción
 
 Memorama Musical es un juego en el que debes emparejar tarjetas que contienen títulos de canciones famosas con su autor y año. Estimula la memoria, la atención a los detalles y la cultura general, ayudando al desarrollo cognitivo a través del reconocimiento y asociación de información musical.
 
+&nbsp;
+
 > **Objetivo:** Emparejar correctamente títulos de canciones con su autor y año de la canción, poniendo a prueba tu memoria y aprendiendo datos curiosos sobre la música.
 
----
+&nbsp;
 
 ## Datos Generales
 
@@ -16,7 +20,7 @@ Memorama Musical es un juego en el que debes emparejar tarjetas que contienen t�
 - **Carrera:** `IMT Ingeniería en Mecatrónica`
 - **Fecha:** `19/10/2025`
 
----
+&nbsp;
 
 ## Reglas e Instrucciones
 
@@ -30,14 +34,14 @@ Memorama Musical es un juego en el que debes emparejar tarjetas que contienen t�
 >
 > ¡Diviértete y pon a prueba tu memoria musical!
 
----
+&nbsp;
 
 ## Entrega Inicial
 
 La versión inicial del código base se encuentra en el archivo:  
 `codigo_global`
 
----
+&nbsp;
 
 ## Instalación
 
@@ -51,7 +55,7 @@ Instala las dependencias (Python 3.7+):
 pip install colorama
 ```
 
----
+&nbsp;
 
 ## Uso
 
@@ -63,13 +67,14 @@ python main.py
 
 Sigue las instrucciones en pantalla para seleccionar cartas, emparejar y sumar puntos.
 
----
+&nbsp;
 
 ## Estructura del Proyecto y Subsistemas
 
----
+&nbsp;
 
 ### main.py
+
 Menú principal, gestiona la interacción del usuario y llama a las funciones del resto de módulos.
 
 ```python
@@ -80,9 +85,10 @@ Funciones:
 - main(): función principal que muestra el menú y llama a otros módulos.
 ```
 
----
+&nbsp;
 
 ### juego.py
+
 Lógica principal del memorama. Controla puntaje, intentos, pares encontrados y estado del tablero.
 
 ```python
@@ -102,9 +108,10 @@ Funciones:
 - formatea_carta_datos(carta: dict) -> str: da formato a los datos de la carta.
 ```
 
----
+&nbsp;
 
 ### baraja.py
+
 Crea y mezcla la baraja de cartas del juego.
 
 ```python
@@ -115,9 +122,10 @@ Funciones:
 - crear_baraja(num_2010s: int, num_1990s_2010: int, num_1970s_1990: int) -> list: genera la baraja con las canciones seleccionadas y las mezcla aleatoriamente.
 ```
 
----
+&nbsp;
 
 ### tablero.py
+
 Genera y muestra el tablero visible y real.
 
 ```python
@@ -131,9 +139,10 @@ Funciones:
 - mostrar_tablero(tablero_visible: list): imprime el tablero visible en terminal.
 ```
 
----
+&nbsp;
 
 ### solicitar_posicion.py
+
 Valida y solicita la posición que el usuario quiere destapar.
 
 ```python
@@ -141,9 +150,10 @@ Funciones:
 - solicitar_posicion(tablero_visible: list) -> tuple[int, int]: pide y valida la posición de la carta que el usuario quiere destapar.
 ```
 
----
+&nbsp;
 
 ### validar_opcion.py
+
 Valida las opciones que el usuario introduce en el menú principal.
 
 ```python
@@ -151,9 +161,10 @@ Funciones:
 - validar_opcion_int(entrada: str) -> int: valida que la opción ingresada sea un entero válido.
 ```
 
----
+&nbsp;
 
 ### presentacion.py
+
 Información general y descripción del juego.
 
 ```python
@@ -162,9 +173,10 @@ Funciones:
 - descripcion_juego(): muestra la descripción y beneficios del juego.
 ```
 
----
+&nbsp;
 
 ### instrucciones.py
+
 Lee y muestra las instrucciones del juego desde el archivo de texto.
 
 ```python
@@ -172,9 +184,10 @@ Funciones:
 - mostrar_instrucciones(): lee e imprime las instrucciones desde instrucciones.txt.
 ```
 
----
+&nbsp;
 
 ### canciones_2010s.py, canciones_1990s_2010.py, canciones_1970s_1990.py
+
 Listas de canciones por década. Cada lista incluye el título, autor, año, época y un dato curioso.
 
 ```python
@@ -187,19 +200,38 @@ Funciones:
 - No tienen funciones, solo almacenan los datos.
 ```
 
----
+&nbsp;
 
 ### instrucciones.txt
+
 Contiene instrucciones y reglas detalladas que se muestran al usuario durante la experiencia de juego.
 
 ```text
 Archivo de texto plano con las reglas y mecánicas del juego.
 ```
 
----
+&nbsp;
 
 ### codigo_global
+
 Entrega inicial del código base del proyecto.  
 Aquí puedes consultar la estructura y lógica original antes de modularizar el proyecto.
 
+&nbsp;
+
+## Bibliografía
+
+Bupa Salud. (s.f.). El juego de memoria para personas mayores: beneficios y tipos. [https://www.bupasalud.com.mx/salud/juego-memoria-personas-mayores](https://www.bupasalud.com.mx/salud/juego-memoria-personas-mayores)  
+Jiménez Nájera, M. (2024). Los juegos de mesa potencializan un cerebro ágil y saludable a lo largo de la vida. Observatorio de Innovación Educativa del Tecnológico de Monterrey. [https://observatorio.tec.mx/los-juegos-de-mesa-potencializan-un-cerebro-agil](https://observatorio.tec.mx/los-juegos-de-mesa-potencializan-un-cerebro-agil)  
+Equipo Fundación Pasqual Maragall. (2024). Juegos de memoria para adultos: ¿cómo ayudan a ejercitar la mente? [https://blog.fpmaragall.org/juegos-memoria-adultos](https://blog.fpmaragall.org/juegos-memoria-adultos)  
+
+&nbsp;
+
 ---
+
+Este proyecto fue realizado por **Raúl Antonio Guerrero Canales**  
+Estudiante de primer semestre de IMT en el Tec de Monterrey campus Monterrey durante el curso Pensamiento computacional para ingeniería (Gpo 455)
+
+&nbsp;
+
+`Pd: Me esforce mucho en este proyecto, fue complicado ya que nunca había realizado algo asi en python pero me diverti mucho en este mini proyecto aparte me encanta la musica!! y es una meta personal unir tanto tecnología accesible como música`
