@@ -227,6 +227,46 @@ Equipo Fundación Pasqual Maragall. (2024). Juegos de memoria para adultos: ¿c�
 
 &nbsp;
 
+## Casos de prueba
+
+![caso1](casos_prueba/1.png)
+![caso2](casos_prueba/2.png)
+![caso3](casos_prueba/3.png)
+![caso4](casos_prueba/4.png)
+![caso5](casos_prueba/5.png)
+![caso6](casos_prueba/6.png)
+![caso7](casos_prueba/7.png)
+![caso8](casos_prueba/8.png)
+![caso9](casos_prueba/9.png)
+![caso10](casos_prueba/10.png)
+![caso11](casos_prueba/11.png)
+![caso12](casos_prueba/12.png)
+![caso13](casos_prueba/13.png)
+![caso14](casos_prueba/14.png)
+![caso15](casos_prueba/15.png)
+![caso16](casos_prueba/16.png)
+![caso17](casos_prueba/17.png)
+![caso18](casos_prueba/18.png)
+![caso19](casos_prueba/19.png)
+![caso20](casos_prueba/20.png)
+![caso21](casos_prueba/21.png)
+![caso22](casos_prueba/22.png)
+![caso23](casos_prueba/23.png)
+![caso24](casos_prueba/24.png)
+![caso25](casos_prueba/25.png)
+![caso26](casos_prueba/26.png)
+![caso27](casos_prueba/27.png)
+![caso28](casos_prueba/28.png)
+![caso29](casos_prueba/29.png)
+![caso30](casos_prueba/30.png)
+![caso31](casos_prueba/31.png)
+![caso32](casos_prueba/32.png)
+![caso33](casos_prueba/33.png)
+![caso34](casos_prueba/34.png)
+![caso35](casos_prueba/35.png)
+
+&nbsp;
+
 ---
 
 Este proyecto fue realizado por **Raúl Antonio Guerrero Canales**  
