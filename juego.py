@@ -26,6 +26,12 @@ def formatea_carta_titulo(carta): #Enseña el título de la carta
 def formatea_carta_datos(carta): #Enseña los datos de la carta
     return f"{carta['autor']}, {carta['anio']}"
 
+def mostrar_carta(tablero_visible, tablero_real, fila, columna):
+    if tablero_real[fila][columna]["tipo"] == "titulo":
+        tablero_visible[fila][columna] = formatea_carta_titulo(tablero_real[fila][columna])
+    else:
+        tablero_visible[fila][columna] = formatea_carta_datos(tablero_real[fila][columna])
+
 def jugar(): #Función principal del juego
     print(Fore.CYAN + "\n¡Bienvenido al Memorama Musical!") 
     ##### -------- Configuración del juego -------- #####
@@ -71,8 +77,9 @@ def jugar(): #Función principal del juego
         if not juego_activo: # Si el juego ha terminado
             return # Sale de la función
 
-        tablero_visible[f1][c1] = formatea_carta_titulo(tablero_real[f1][c1]) # Muestra lo que hay en la carta seleccionada
-        mostrar_tablero(tablero_visible) # Muestra el tablero actualizado
+        # Mostrar la carta 1 según su tipo
+        mostrar_carta(tablero_visible, tablero_real, f1, c1)
+        mostrar_tablero(tablero_visible)
 
         seleccion_valida_2 = False # Solicita la segunda carta
         while not seleccion_valida_2 and juego_activo: # Mientras no sea válida y el juego esté activo
@@ -88,8 +95,9 @@ def jugar(): #Función principal del juego
         if not juego_activo: # Si el juego ha terminado
             return
 
-        tablero_visible[f2][c2] = formatea_carta_datos(tablero_real[f2][c2]) # Muestra lo que hay en la carta seleccionada
-        mostrar_tablero(tablero_visible) # Muestra el tablero actualizado
+        # Mostrar la carta 2 según su tipo
+        mostrar_carta(tablero_visible, tablero_real, f2, c2)
+        mostrar_tablero(tablero_visible)
 
         intentos += 1 # Suma los intentos
 
